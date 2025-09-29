@@ -1,0 +1,27 @@
+@use "helpers" as *;
+
+:root {
+  --color-light: #f4f6f5;
+
+  --color-dark: #2c2d35;
+  --color-grey: #86928b;
+
+  --color-green: #598d66;
+  --color-light-green: #d4e8d9;
+  --color-dark-green: #376b44;
+
+  --color-sand: #eedb6d;
+  --color-dark-sand: #d9b949;
+
+  --font-family-base: "Inter", sans-serif;
+  --font-family-accent: "Kumbh Sans", sans-serif;
+
+  --container-width: #{rem(1110)};
+  --container-padding-x: #{rem(35)};
+
+  --transition-duration: 0.25s;
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}

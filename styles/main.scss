@@ -1,0 +1,11 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+.header,
+.footer,
+.hero {
+  display: none !important;
+}
