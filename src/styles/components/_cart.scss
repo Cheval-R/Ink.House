@@ -41,11 +41,12 @@
   // width: 100%;
   background-color: $green-light;
   position: absolute;
-  transition: transform 0.25s ease-in;
-  transform: translateX(150%);
-
+  transition: opacity 0.25s ease-in;
+  opacity: 0;
+  z-index: -1;
   &.active {
-    transform: translateX(0);
+    z-index: 0;
+    opacity: 1;
   }
 
   &__products {

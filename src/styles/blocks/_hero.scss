@@ -1,0 +1,32 @@
+@use "./../var" as *;
+.hero {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__content {
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  &__intro {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #86928b;
+    margin-bottom: 60px;
+  }
+}
+
+.green-text {
+  color: $green;
+}
