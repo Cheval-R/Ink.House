@@ -1,0 +1,39 @@
+@forward "./../components/logo";
+@forward "./../components/nav";
+@forward "./../components/cart";
+@forward "./../components/burger";
+@use "./../var" as *;
+
+.header {
+  position: relative;
+  background-color: $green-light;
+  padding: 32px 0;
+
+  @media (max-width: 700px) {
+    padding: 16px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    @media (max-width: 700px) {
+      padding-top: 16px;
+      border-top: 1px solid #c3d1c6;
+    }
+    @media (max-width: 500px) {
+    }
+  }
+}

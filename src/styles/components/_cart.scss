@@ -1,0 +1,79 @@
+@use "./../var" as *;
+
+.cart {
+  position: relative;
+  outline: none;
+
+  &:focus-visible &__icon {
+    background-color: $green-light;
+    color: $green;
+  }
+  &__icon {
+    transition:
+      background-color 0.25s ease-in,
+      color 0.25s ease-in;
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &__product-counter {
+    width: 13px;
+    height: 13px;
+    background-color: $green;
+    border-radius: 100%;
+    padding: 4px;
+
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 0.5;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.shopping-cart {
+  padding: 30px 15px;
+  right: 0;
+  top: 35px;
+  // width: 100%;
+  background-color: $green-light;
+  position: absolute;
+  transition: transform 0.25s ease-in;
+  transform: translateX(150%);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__products {
+    padding: 15px 5px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  &__item {
+    outline-offset: 2px;
+    border-radius: 1px;
+    transition:
+      outline-color 0.25s ease-in,
+      background-color 0.25s ease-in,
+      color 0.25s ease-in;
+    &:hover {
+      color: $green;
+    }
+    &:focus-visible {
+      background-color: $green-light;
+      color: $green;
+      outline: 2px solid $green;
+    }
+    &:active {
+      color: $green-dark;
+    }
+  }
+}

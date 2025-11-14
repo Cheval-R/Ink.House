@@ -1,0 +1,60 @@
+@use "./../var" as *;
+
+.burger {
+  display: none;
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  &__top,
+  &__middle,
+  &__bottom {
+    height: 2px;
+    width: 20px;
+    border-radius: 15px;
+    background: black;
+    border-radius: 5px;
+    transform-origin: left;
+    transition: all 0.5s;
+  }
+
+  &.active &__top {
+    transform: rotate(45deg);
+  }
+
+  &.active &__middle {
+    opacity: 0;
+  }
+
+  &.active &__bottom {
+    transform: rotate(-45deg);
+  }
+  &:hover &__top,
+  &:hover &__middle,
+  &:hover &__bottom {
+    background-color: $green;
+  }
+
+  &:focus-visible &__top,
+  &:focus-visible &__middle,
+  &:focus-visible &__bottom {
+    background-color: $green;
+  }
+  &:active &__top,
+  &:active &__middle,
+  &:active &__bottom {
+    background-color: $green-dark;
+  }
+  &:focus-visible {
+    outline: $opacity-color;
+    background-color: $green-light;
+  }
+}

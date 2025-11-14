@@ -1,0 +1,77 @@
+@use "./../var" as *;
+
+.nav {
+  margin-left: auto;
+  font-size: clamp(18px, 2.2vw, 20px);
+
+  @media (max-width: 700px) {
+    margin-inline: 0;
+  }
+
+  @media (max-width: 500px) {
+    padding: 30px 15px;
+    left: 0;
+    top: 125px;
+    width: 100%;
+    background-color: $green-light;
+    position: absolute;
+    transition: transform 0.25s ease-in;
+    transform: translateX(-100%);
+  }
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    outline-offset: 2px;
+    border-radius: 1px;
+    transition:
+      outline-color 0.25s ease-in,
+      background-color 0.25s ease-in,
+      color 0.25s ease-in;
+    &:hover {
+      color: $green;
+    }
+    &:focus-visible {
+      background-color: $green-light;
+      color: $green;
+      outline: 2px solid $green;
+    }
+    &:active {
+      color: $green-dark;
+    }
+  }
+}
+
+/*     border-radius: 20px;
+    padding: 10px 20px;
+    background-color: $green-light;
+    transition:
+      color 0.25s ease-in,
+      background-color 0.25s ease-in;
+    &:hover {
+      color: white;
+      background-color: $green;
+    }
+    &:focus-visible {
+      outline-offset: -1px;
+      outline: 2px solid $green;
+    }
+    &:active {
+      background-color: $green-dark;
+    } */
