@@ -1,0 +1,64 @@
+@use "./../var" as *;
+
+.button {
+  font-weight: 500;
+  display: block;
+  width: max-content;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: $green-light;
+  transition:
+    color 0.25s ease-in,
+    background-color 0.25s ease-in;
+  &:hover {
+    color: $white;
+    background-color: $green;
+  }
+  &:focus-visible {
+    outline-offset: -1px;
+    outline: 2px solid $green;
+  }
+  &.active,
+  &:active {
+    color: $white;
+    background-color: $green-dark;
+  }
+
+  &--square {
+    color: $green;
+    background-color: inherit;
+    outline: $green 1px solid;
+    outline-offset: 0;
+    border-radius: 0;
+    padding: 21px 60px;
+
+    @media (max-width: 800px) {
+      padding: 18px 51px;
+    }
+    @media (max-width: 660px) {
+      padding: 14px 40px;
+    }
+    @media (max-width: 500px) {
+      padding: 14px 30px;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $green;
+    }
+
+    &:focus-visible {
+      outline-offset: 0;
+      outline: $green 1px solid;
+      background-color: $green-light;
+    }
+    &:active {
+      background-color: $green-dark;
+    }
+  }
+
+  @media (max-width: 660px) {
+    font-size: 18px;
+  }
+}

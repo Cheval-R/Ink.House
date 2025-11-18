@@ -1,6 +1,6 @@
-const Navigation = ({ navList, isOpen }) => {
+const Navigation = ({ navList, isBurgerOpen }) => {
   return (
-    <nav className={`nav ${isOpen ? "active" : ""}`}>
+    <nav className={`nav ${isBurgerOpen ? "active" : ""}`}>
       <ul className='nav__list'>
         {
           navList.map(({ name, url }) => {

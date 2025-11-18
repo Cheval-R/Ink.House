@@ -1,29 +1,51 @@
 @use "./../var" as *;
 .hero {
+  padding: 0 0 35px;
   &__wrapper {
     display: flex;
     align-items: center;
     gap: 30px;
   }
   &__image {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    flex-basis: 50%;
   }
   &__content {
+    flex-basis: 50%;
   }
   &__title {
     font-weight: 500;
-    font-size: 60px;
+    font-size: clamp(30px, 5.3vw, 60px);
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 1.7vw, 20px);
   }
   &__intro {
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
+
     font-weight: 400;
     line-height: 1.5;
     color: #86928b;
-    margin-bottom: 60px;
+    margin-bottom: clamp(40px, 5vw, 60px);
+  }
+
+  @media (max-width: 660px) {
+    padding-block: 50px 25px;
+    &__image {
+      flex-basis: 40%;
+    }
+    &__content {
+      flex-basis: 60%;
+    }
+    &__intro {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 500px) {
+    &__content {
+      flex-basis: auto;
+    }
+    &__image {
+      display: none;
+    }
   }
 }
 

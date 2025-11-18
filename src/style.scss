@@ -2,5 +2,7 @@
 @use "./styles/normalize";
 @use "./styles/global";
 @use "./styles/var";
+@use "./styles/components/button";
 @use "./styles/blocks/header";
 @use "./styles/blocks/hero";
+@use "./styles/blocks/replicas";
