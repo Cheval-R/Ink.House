@@ -8,12 +8,12 @@
   padding: 10px 20px;
   text-align: center;
   background-color: $green-light;
-  transition:
-    color 0.25s ease-in,
-    background-color 0.25s ease-in;
-  &:hover {
-    color: $white;
-    background-color: $green;
+  transition: color 0.25s ease-in, background-color 0.25s ease-in;
+  @media (hover: hover) {
+    &:hover {
+      color: $white;
+      background-color: $green;
+    }
   }
   &:focus-visible {
     outline-offset: -1px;
@@ -43,11 +43,12 @@
       padding: 14px 30px;
     }
 
-    &:hover {
-      color: $white;
-      background-color: $green;
+    @media (hover: hover) {
+      &:hover {
+        color: $white;
+        background-color: $green;
+      }
     }
-
     &:focus-visible {
       outline-offset: 0;
       outline: $green 1px solid;

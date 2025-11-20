@@ -1,6 +1,10 @@
-const Button = ({ modifier, children }) => {
+const Button = ({ classModifiers, children, onClick, value }) => {
   return (
-    <button className={`button ${modifier ?? ''}`}>{children}</button>
+    <button
+      onClick={onClick}
+      className={`button ${classModifiers ?? ''}`}
+      value={value}
+    >{children}</button>
   );
 };
 

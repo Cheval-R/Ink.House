@@ -1,4 +1,4 @@
-@use "./../var" as *;
+@use './../var' as *;
 
 .burger {
   display: none;
@@ -37,10 +37,12 @@
   &.active &__bottom {
     transform: rotate(-45deg);
   }
-  &:hover &__top,
-  &:hover &__middle,
-  &:hover &__bottom {
-    background-color: $green;
+  @media (hover: hover) {
+    &:hover &__top,
+    &:hover &__middle,
+    &:hover &__bottom {
+      background-color: $green;
+    }
   }
 
   &:focus-visible &__top,

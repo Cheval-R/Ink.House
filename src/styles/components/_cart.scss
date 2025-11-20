@@ -1,4 +1,4 @@
-@use "./../var" as *;
+@use './../var' as *;
 
 .cart {
   position: relative;
@@ -9,11 +9,11 @@
     color: $green;
   }
   &__icon {
-    transition:
-      background-color 0.25s ease-in,
-      color 0.25s ease-in;
-    &:hover {
-      color: $green;
+    transition: background-color 0.25s ease-in, color 0.25s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        color: $green;
+      }
     }
   }
 
@@ -61,12 +61,11 @@
   &__item {
     outline-offset: 2px;
     border-radius: 1px;
-    transition:
-      outline-color 0.25s ease-in,
-      background-color 0.25s ease-in,
-      color 0.25s ease-in;
-    &:hover {
-      color: $green;
+    transition: outline-color 0.25s ease-in, background-color 0.25s ease-in, color 0.25s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        color: $green;
+      }
     }
     &:focus-visible {
       background-color: $green-light;

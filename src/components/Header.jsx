@@ -4,10 +4,7 @@ import Cart from './Cart';
 import Logo from './Logo';
 import Navigation from './Navigation';
 
-const Header = () => {
-  const [shoppingCartList, setShoppingCartList] = useState([
-    { name: 'кукурузу' }, { name: 'potato' }, { name: 'carrot' },
-  ]);
+const Header = ({ arts, cartList }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
@@ -27,7 +24,8 @@ const Header = () => {
               { name: 'О нас', url: '#!' },
             ]} />
           <Cart
-            cartList={shoppingCartList}
+            arts={arts}
+            cartList={cartList}
             isCartOpen={isCartOpen}
             setIsCartOpen={setIsCartOpen}
           />

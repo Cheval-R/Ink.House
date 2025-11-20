@@ -1,10 +1,13 @@
 import ShoppingList from './ShoppingList';
 
-const Cart = ({ cartList, isCartOpen, setIsCartOpen }) => {
+const Cart = ({ arts, cartList, isCartOpen, setIsCartOpen }) => {
+
+
+
   return (
     <button
       className="cart"
-      onClick={() => { setIsCartOpen(!isCartOpen) }}>
+      onClick={() => { setIsCartOpen(!isCartOpen); }}>
       <svg className='cart__icon' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_2_671)">
           <path d="M9.24992 21.1667C9.75618 21.1667 10.1666 20.7563 10.1666 20.25C10.1666 19.7438 9.75618 19.3334 9.24992 19.3334C8.74366 19.3334 8.33325 19.7438 8.33325 20.25C8.33325 20.7563 8.74366 21.1667 9.24992 21.1667Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -17,8 +20,6 @@ const Cart = ({ cartList, isCartOpen, setIsCartOpen }) => {
           </clipPath>
         </defs>
       </svg>
-
-
       {/* <img className='cart__icon' src="/cart-icon.svg" alt="" /> */}
       {cartList.length > 0 ? <span className='cart__product-counter'>{cartList.length}</span> : <></>}
       <ShoppingList
