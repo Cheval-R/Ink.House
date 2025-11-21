@@ -1,6 +1,6 @@
 import Button from './Button';
 
-const ReplicasCountries = ({ countries, country, setCountry }) => {
+const CountriesButtons = ({ countries, country, setCountry }) => {
   function handleChangeCountry(event) {
     setCountry(event.target.value);
   }
@@ -11,14 +11,14 @@ const ReplicasCountries = ({ countries, country, setCountry }) => {
           return (
             <li
               className='replica-countries__item'
-              key={c.key}
+              key={c}
             >
               <Button
-                classModifiers={`${country === c.key ? 'active' : ''}`}
+                classModifiers={`${country === c ? 'active' : ''}`}
                 onClick={handleChangeCountry}
-                value={c.key}
+                value={c}
               >
-                {c.title}
+                {c}
               </Button>
             </li>);
         }))}
@@ -27,4 +27,4 @@ const ReplicasCountries = ({ countries, country, setCountry }) => {
   );
 };
 
-export default ReplicasCountries;
+export default CountriesButtons;

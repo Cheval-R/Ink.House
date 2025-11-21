@@ -24,16 +24,18 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
     width: 100%;
+
     @media (max-width: 700px) {
       padding-top: 16px;
       border-top: 1px solid #c3d1c6;
     }
-    @media (max-width: 500px) {
-    }
+
+    @media (max-width: 500px) {}
   }
 }

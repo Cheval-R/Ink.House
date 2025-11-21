@@ -1,12 +1,14 @@
-import { useState } from 'react';
 import Burger from './Burger';
 import Cart from './Cart';
 import Logo from './Logo';
 import Navigation from './Navigation';
 
-const Header = ({ arts, cartList }) => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+const Header = ({
+  arts,
+  cartList, productInCartCount,
+  isCartOpen, setIsCartOpen,
+  isBurgerOpen, setIsBurgerOpen }) => {
+
   return (
     <section className='header'>
       <div className='header__wrapper container'>
@@ -28,6 +30,7 @@ const Header = ({ arts, cartList }) => {
             cartList={cartList}
             isCartOpen={isCartOpen}
             setIsCartOpen={setIsCartOpen}
+            productInCartCount={productInCartCount}
           />
         </div>
       </div>

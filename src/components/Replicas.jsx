@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import ReplicasArts from "./ReplicasArts";
-import ReplicasCountries from "./ReplicasCountries";
+import CountriesButtons from "./CountriesButtons";
 
 const Replicas = ({ countries, arts, putToCart }) => {
-  const [country, setCountry] = useState("france");
+  const [country, setCountry] = useState("Франция");
   return (
     <section className="replicas">
       <div className="container">
         <div className="replicas__header">
           <h2 className="replicas__title">Репродукции</h2>
-          <ReplicasCountries
+          <CountriesButtons
             countries={countries}
             country={country}
             setCountry={setCountry} />

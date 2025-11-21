@@ -1,6 +1,7 @@
 @use './../var' as *;
 
 .nav {
+  z-index: 99;
   margin-left: auto;
   font-size: clamp(18px, 2.2vw, 20px);
 
@@ -10,16 +11,17 @@
 
   @media (max-width: 500px) {
     padding: 30px 15px;
-    left: 0;
-    top: 125px;
+    top: 40px;
+    left: 50%;
     width: 100%;
     background-color: $green-light;
     position: absolute;
     transition: transform 0.25s ease-in;
-    transform: translateX(-100%);
+    transform: translateX(-160%);
   }
+
   &.active {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 
   &__list {
@@ -27,6 +29,7 @@
     justify-content: flex-end;
     align-items: center;
     gap: 60px;
+
     @media (max-width: 500px) {
       flex-direction: column;
       align-items: flex-start;
@@ -34,23 +37,25 @@
     }
   }
 
-  &__item {
-  }
+  &__item {}
 
   &__link {
     outline-offset: 2px;
     border-radius: 1px;
     transition: outline-color 0.25s ease-in, background-color 0.25s ease-in, color 0.25s ease-in;
+
     @media (hover: hover) {
       &:hover {
         color: $green;
       }
     }
+
     &:focus-visible {
       background-color: $green-light;
       color: $green;
       outline: 2px solid $green;
     }
+
     &:active {
       color: $green-dark;
     }

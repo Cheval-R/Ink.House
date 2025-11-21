@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import Button from './Button';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { numberFormat } from "./../App"
+
 var settings = {
   dots: true,
   speed: 500,
@@ -40,7 +42,7 @@ const ReplicasArts = ({ arts, country, putToCart }) => {
             <p className='replicas-arts__author'>{art.author}</p>
             <h3 className='replicas-arts__name'>{art.name}</h3>
             <p className='replicas-arts__type'>{art.type}</p>
-            <p className='replicas-arts__price'>{art.price}</p>
+            <p className='replicas-arts__price'>{`${numberFormat.format(art.price)}`}</p>
           </div>
           <Button
             classModifiers='button--square'
